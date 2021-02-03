@@ -1,0 +1,1 @@
+export { HangmanDisplay } from './HangmanDisplay';
