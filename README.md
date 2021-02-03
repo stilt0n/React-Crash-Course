@@ -8,7 +8,7 @@ I also think I can move more quickly than normal tutorials on the internet becau
 
 Because Software Dev taught very little JavaScript, I'll also assume that people may not be familiar with more modern language features.  I'll try to give quick explanations about any features that get used in this tutorial.  If you know JavaScript pretty well, then I apologize in advance for any pre-emptive handholding.
 
-**A note:**
+### A note:
 There are two main ways to write components in React.  You can write components as function components or class components.  It used to be the case that only class components could be stateful.  In 2018, React introduced hooks which allowed function components to be stateful, among other things.
 
 I am choosing to completely ignore class components. I am mentioning this up front because I have never seen a React tutorial that starts off with hooks.  They always introduce class based components first, and often spend the bulk of their time on them, only introducing hooks as an afterthought.
@@ -66,7 +66,7 @@ is extremely similar to HTML.  There are some differences, but we'll get into th
 
 Finally you're exporting the App.  It's a default export.
 
-**JavaScript imports and exports**
+### JavaScript imports and exports
 If you're unfamliar with JavaScript exports and imports, there are a few kinds of imports.  Named imports/exports use this format:
 ```js
 // in stuff.js
@@ -201,7 +201,7 @@ const CustomHello = ({ name }) => <h1>Hello, {name}</h1>
 ```
 Here this doesn't matter much.  But say `CustomHello` as a very large component.  If someone else had to use your component, they would see that it takes `props` as an argument, but they'd have no idea what kind of data they could pass to the component without reading through all of your component code and seeing what keys of props get used.  As a side note, this is less of an issue in if you are using TypeScript with React because your props object will have a type so people will be able to see the expected fields from their IDE's intellisence.
 
-**Making more use of Props**
+### Making more use of Props
 Let's make some more use of the fact that we have props by rendering multiple greetings.  We'll have an array of name strings, and we'll make a
 greeting for each name in the array.  We'll need to make use of JavaScript Array methods because you can't write `for` loops within JSX.
 ```jsx
@@ -216,7 +216,7 @@ const App = () => {
 ```
 In case you're not familiar with `map`, `map` takes a function as an argument.  It copies the array calling it, applies the function to each element of that array and then returns the modified copy.  JSX can render arrays of components, so it renders all of the custom greetings on the page.
 
-**The use state hook**
+### The use state hook
 We're going to do one more thing with this App and then we'll make something more interesting.  So far we can pass props into components, but all those values are hardcoded.  What if we want to change things real time?  Let's make a button that toggles the text on our gretting between blue
 and red.  Then our App can finally be an eyesore to be proud of.  First we need to import useState from react.  Let's modify the import statement.
 ```jsx
@@ -306,7 +306,7 @@ Let's make a quick Hangman app to really use this stuff in practice.  With extra
 I'm going to use the same app we just used for experimenting around.  But if you want to keep it, you can create a new react app for this project.
 
 ## Materials
-I have some MS Paint drawings to use for the Hangman progression.  You can download those drawings from TODO.
+I have some MS Paint drawings to use for the Hangman progression.  You can download those drawings from `src/resources`.
 
 ## Organizing the App
 
